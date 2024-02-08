@@ -10,7 +10,6 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "vite --host 0.0.0.0",
-    "prebuild": "npm run lint && npm run test && npm run clean",
     "postbuild": "ls index.es.js index.js index.css index.d.ts scss/index.scss >> /dev/null && echo 'build success'",
     "build": "npm run build:lib-es & npm run build:lib-umd & npm run css && npm run type",
     "build:lib-es": "LIB_FORMAT=es vite build",
